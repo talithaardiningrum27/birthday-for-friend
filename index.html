@@ -2,10 +2,104 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Kamu 🤍</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-image: url("https://drive.google.com/uc?export=view&id=14j9EpI1WWJ3NQRbcVgEIKc9rTiyhEkdm");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 390px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 26px;
+      border: none;
+      border-radius: 30px;
+      background: #ff8fa3;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff6f91;
+    }
+
+    #surat {
+      display: none;
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #333;
+      text-align: left;
+    }
+  </style>
 </head>
-<body style="background:#ffd1dc; text-align:center; padding-top:100px; font-family:Arial;">
-  <h1>🎂 Selamat Ulang Tahun 🎉</h1>
-  <p>Kalau kamu lihat ini, webnya SUDAH JADI 🤍</p>
+
+<body>
+  <div class="card">
+    <h2>🎉 Selamat Ulang Tahun 🎂</h2>
+
+    <button onclick="bukaSurat()">📜 Buka Surat</button>
+
+    <div id="surat">
+      <p>
+        Hari ini aku cuma mau meluangkan waktu sejenak buat bilang betapa
+        bersyukurnya aku punya kamu di hidupku. Kadang kita terlalu sibuk
+        sama urusan masing-masing sampai lupa buat mengapresiasi kehadiran
+        satu sama lain, tapi di hari spesialmu ini, aku pengen kamu tahu
+        kalau kamu itu berarti banget.
+        <br><br>
+        Makasih ya sudah jadi orang yang paling “waras” pas aku lagi kacau,
+        dan jadi orang yang paling seru pas kita lagi mau gila-gilaan bareng.
+        Aku selalu kagum sama cara kamu menghadapi hidup—meskipun kadang
+        berat, kamu tetap jadi diri kamu yang apa adanya, yang tulus, dan
+        yang selalu punya ruang buat dengerin keluh kesahku yang mungkin
+        sudah kamu hafal luar kepala.
+        <br><br>
+        Aku berharap di usia yang baru ini, kamu bisa lebih sayang sama diri
+        sendiri. Kurang-kurangin begadangnya, jangan terlalu keras sama diri
+        sendiri kalau ada yang nggak sesuai rencana, dan ingat kalau kamu
+        nggak harus selalu kuat sendirian. Aku bakal selalu ada di sini, di
+        barisan paling depan buat dukung semua keputusanmu, atau sekadar
+        jadi teman makan dan ngobrol nggak jelas sampai pagi.
+        <br><br>
+        Semoga tahun ini membawa banyak kejutan kecil yang bikin kamu
+        tersenyum, pertemuan-pertemuan yang berkesan, dan ketenangan yang
+        selama ini mungkin kamu cari. Kamu layak mendapatkan semua hal baik
+        yang ditawarkan dunia ini karena hati kamu memang sebaik itu.
+        <br><br>
+        Sekali lagi, selamat ulang tahun, Sayang! Ayo kita buat lebih banyak
+        cerita lagi tahun ini, entah itu cerita sedih yang bakal kita
+        ketawain nantinya, atau pencapaian-pencapaian hebat yang bakal kita
+        rayakan bareng. Love you so much!
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function bukaSurat() {
+      document.getElementById("surat").style.display = "block";
+    }
+  </script>
 </body>
 </html>
