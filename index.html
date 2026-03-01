@@ -2,105 +2,221 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <title>Happy Birthday 💖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untuk Kamu 🤍</title>
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
+      font-family: "Times New Roman", Times, serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
       min-height: 100vh;
-      background-image: url("https://drive.google.com/uc?export=view&id=14j9EpI1WWJ3NQRbcVgEIKc9rTiyhEkdm");
-    background.jpg
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 390px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    .container {
+      width: 100%;
+      padding: 40px 20px;
       text-align: center;
     }
 
+    h1 {
+      font-size: 2.6em;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    /* AMPL0P */
+    .envelope {
+      width: 100%;
+      max-width: 380px;
+      margin: auto;
+      perspective: 1000px;
+    }
+
+    .envelope-inner {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      transition: transform 1s ease;
+      transform-style: preserve-3d;
+    }
+
+    .envelope.open .envelope-inner {
+      transform: rotateX(180deg);
+    }
+
+    .envelope-front,
+    .envelope-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      backface-visibility: hidden;
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .envelope-back {
+      transform: rotateX(180deg);
+      font-size: 2em;
+    }
+
     button {
-      margin-top: 20px;
-      padding: 12px 26px;
-      border: none;
+      margin-top: 25px;
+      padding: 14px 26px;
       border-radius: 30px;
-      background: #ff8fa3;
-      color: white;
-      font-size: 16px;
+      border: none;
+      background: white;
+      color: #ff6f91;
+      font-size: 1em;
+      font-weight: bold;
       cursor: pointer;
     }
 
-    button:hover {
-      background: #ff6f91;
+    /* ISI SURAT */
+    .letter {
+      max-width: 380px;
+      margin: 30px auto 0;
+      background: rgba(255,255,255,0.85);
+      color: #333;
+      padding: 25px;
+      border-radius: 20px;
+      display: none;
+      text-align: left;
+      line-height: 1.8;
+      animation: slideUp 1.2s ease forwards;
     }
 
-    #surat {
-      display: none;
-      margin-top: 20px;
-      font-size: 14px;
-      line-height: 1.7;
-      color: #333;
-      text-align: left;
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* KONFETI */
+    .confetti {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      top: -10px;
+      animation: fall linear forwards;
+      z-index: 999;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8em;
+      opacity: 0.8;
     }
   </style>
 </head>
 
 <body>
-  <div class="card">
-    <h2>🎉 Selamat Ulang Tahun 🎂</h2>
+<div class="container">
+  <h1>🎉 Happy Birthday 🎂</h1>
+  <div class="subtitle">Untuk seseorang yang istimewa 🤍</div>
 
-    <button onclick="bukaSurat()">📜 Buka Surat</button>
-
-    <div id="surat">
-      <p>
-        Hari ini aku cuma mau meluangkan waktu sejenak buat bilang betapa
-        bersyukurnya aku punya kamu di hidupku. Kadang kita terlalu sibuk
-        sama urusan masing-masing sampai lupa buat mengapresiasi kehadiran
-        satu sama lain, tapi di hari spesialmu ini, aku pengen kamu tahu
-        kalau kamu itu berarti banget.
-        <br><br>
-        Makasih ya sudah jadi orang yang paling “waras” pas aku lagi kacau,
-        dan jadi orang yang paling seru pas kita lagi mau gila-gilaan bareng.
-        Aku selalu kagum sama cara kamu menghadapi hidup—meskipun kadang
-        berat, kamu tetap jadi diri kamu yang apa adanya, yang tulus, dan
-        yang selalu punya ruang buat dengerin keluh kesahku yang mungkin
-        sudah kamu hafal luar kepala.
-        <br><br>
-        Aku berharap di usia yang baru ini, kamu bisa lebih sayang sama diri
-        sendiri. Kurang-kurangin begadangnya, jangan terlalu keras sama diri
-        sendiri kalau ada yang nggak sesuai rencana, dan ingat kalau kamu
-        nggak harus selalu kuat sendirian. Aku bakal selalu ada di sini, di
-        barisan paling depan buat dukung semua keputusanmu, atau sekadar
-        jadi teman makan dan ngobrol nggak jelas sampai pagi.
-        <br><br>
-        Semoga tahun ini membawa banyak kejutan kecil yang bikin kamu
-        tersenyum, pertemuan-pertemuan yang berkesan, dan ketenangan yang
-        selama ini mungkin kamu cari. Kamu layak mendapatkan semua hal baik
-        yang ditawarkan dunia ini karena hati kamu memang sebaik itu.
-        <br><br>
-        Sekali lagi, selamat ulang tahun, Sayang! Ayo kita buat lebih banyak
-        cerita lagi tahun ini, entah itu cerita sedih yang bakal kita
-        ketawain nantinya, atau pencapaian-pencapaian hebat yang bakal kita
-        rayakan bareng. Love you so much!
-      </p>
+  <!-- AMPL0P -->
+  <div class="envelope" id="envelope">
+    <div class="envelope-inner">
+      <div class="envelope-front">
+        📜 Ada surat buat kamu
+      </div>
+      <div class="envelope-back">
+        💌
+      </div>
     </div>
   </div>
 
-  <script>
-    function bukaSurat() {
-      document.getElementById("surat").style.display = "block";
+  <button onclick="openLetter()" id="openBtn">Buka Surat 💖</button>
+
+  <!-- ISI SURAT -->
+  <div class="letter" id="letter">
+    Hari ini aku cuma mau meluangkan waktu sejenak buat bilang betapa
+    bersyukurnya aku punya kamu di hidupku. Kadang kita terlalu sibuk sama
+    urusan masing-masing sampai lupa buat mengapresiasi kehadiran satu sama
+    lain, tapi di hari spesialmu ini, aku pengen kamu tahu kalau kamu itu
+    berarti banget.
+    <br><br>
+    Makasih ya sudah jadi orang yang paling <b>"waras"</b> pas aku lagi
+    kacau, dan jadi orang yang paling seru pas kita lagi mau
+    gila-gilaan bareng. Aku selalu kagum sama cara kamu menghadapi hidup—
+    meskipun kadang berat, kamu tetap jadi diri kamu yang apa adanya, yang
+    tulus, dan yang selalu punya ruang buat dengerin keluh kesahku yang
+    mungkin sudah kamu hafal luar kepala.
+    <br><br>
+    Aku berharap di usia yang baru ini, kamu bisa lebih sayang sama diri
+    sendiri. Kurang-kurangin begadangnya, jangan terlalu keras sama diri
+    sendiri kalau ada yang nggak sesuai rencana, dan ingat kalau kamu
+    nggak harus selalu kuat sendirian. Aku bakal selalu ada di sini, di
+    barisan paling depan buat dukung semua keputusanmu, atau sekadar jadi
+    teman makan dan ngobrol nggak jelas sampai pagi.
+    <br><br>
+    Semoga tahun ini membawa banyak kejutan kecil yang bikin kamu
+    tersenyum, pertemuan-pertemuan yang berkesan, dan ketenangan yang
+    selama ini mungkin kamu cari. Kamu layak mendapatkan semua hal baik
+    yang ditawarkan dunia ini karena hati kamu memang sebaik itu.
+    <br><br>
+    <b>Sekali lagi, selamat ulang tahun, Sayang!</b><br>
+    Ayo kita buat lebih banyak cerita lagi tahun ini, entah itu cerita
+    sedih yang bakal kita ketawain nantinya, atau pencapaian-pencapaian
+    hebat yang bakal kita rayakan bareng.
+    <br><br>
+    <b>Love you so much! 🤍</b>
+  </div>
+
+  <footer>Dibuat dengan penuh rasa 🤍</footer>
+</div>
+
+<script>
+  function openLetter() {
+    document.getElementById("envelope").classList.add("open");
+    document.getElementById("openBtn").style.display = "none";
+
+    setTimeout(() => {
+      document.getElementById("letter").style.display = "block";
+      launchConfetti();
+    }, 900);
+  }
+
+  function launchConfetti() {
+    for (let i = 0; i < 70; i++) {
+      const c = document.createElement("div");
+      c.className = "confetti";
+      c.style.left = Math.random() * 100 + "vw";
+      c.style.backgroundColor =
+        `hsl(${Math.random() * 360}, 100%, 70%)`;
+      c.style.animationDuration =
+        (Math.random() * 2 + 2) + "s";
+      document.body.appendChild(c);
+
+      setTimeout(() => c.remove(), 4000);
     }
-  </script>
+  }
+</script>
+
 </body>
 </html>
